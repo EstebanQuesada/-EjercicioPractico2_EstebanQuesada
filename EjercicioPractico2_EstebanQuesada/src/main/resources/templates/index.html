@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns="http://www.w3.org/199/xhtml">
     <head th:replace="~{layout/plantilla :: head}">
@@ -7,39 +6,15 @@
     <body>
          <header th:replace="~{layout/plantilla :: header}"/>
          
-         
-         <main class="container mt-5">
-        <h1 class="text-center mb-4">Bienvenido a HotelEsteban</h1>
-        <p class="lead text-center">Explora y reserva en los mejores hoteles en la zona.</p>
-        <div class="row">
-            <div class="col-md-4">
-                <h2>Lujosos</h2>
-                <p>Descubre hoteles con lujosas instalaciones, servicios de spa de primer nivel y gastronomía gourmet. Ideal para esos viajes especiales donde el lujo es la prioridad.</p>
+         <div>
+            <h2>Lista de Hoteles</h2>
+            <div th:each="hotel : ${hoteles}">
+                <h3 th:text="${hotel.nombre}">Nombre del Hotel</h3>
+                <p th:text="${hotel.ubicacion}">Ubicación</p>
+                <p th:text="${hotel.descripcion}">Descripción</p>
             </div>
-            <div class="col-md-4">
-                <h2>Económicos</h2>
-                <p>Perfectos para viajeros conscientes del presupuesto. Encuentra las mejores ofertas en hoteles económicos sin sacrificar comodidad y conveniencia.</p>
-            </div>
-            <div class="col-md-4">
-                <h2>Boutique</h2>
-                <p>Estos hoteles únicos ofrecen una experiencia personalizada, con atención al detalle en cada habitación y servicio. Ideal para quienes buscan algo más que un lugar para dormir.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <h2>Por qué elegir HotelBook</h2>
-                <ul>
-                    <li>Reservas fáciles y seguras en línea.</li>
-                    <li>Atención al cliente disponible 24/7.</li>
-                    <li>Ofertas exclusivas para miembros.</li>
-                    <li>Opiniones verificadas de otros viajeros.</li>
-                    <li>Comparación transparente de precios y servicios.</li>
-                </ul>
-            </div>
-        </div>
-    </main>
+         </div>
 
          <footer th:replace="~{layout/plantilla :: footer}"/>
     </body>
 </html>
-

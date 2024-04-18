@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Reservas de Hotel</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<header>
+    <h1>Reserve su Estancia</h1>
+</header>
+
+<section>
+    <form th:action="@{/reservar}" th:object="${reserva}" method="post">
+        <div>
+            <label for="hotel">Hotel:</label>
+            <select id="hotel" th:field="*{hotelId}">
+                <option value="">Seleccione un Hotel</option>
+                <option th:each="hotel : ${hoteles}"
+                        th:value="${hotel.id}"
+                        th:text="${hotel.nombre}">Nombre del Hotel
+                </option>
+            </select>
+        </div>
+        <div>
+            <label for="clienteNombre">Nombre del Cliente:</label>
+            <input type="text" id="clienteNombre" th:field="*{clienteNombre}" placeholder="Ingrese su nombre">
+        </div>
+        <div>
+            <label for="numHuespedes">Número de Huéspedes:</label>
+            <input type="number" id="numHuespedes" th:field="*{numHuespedes}" min="1" placeholder="1">
+        </div>
+        <div>
+            <label for="fechaIngreso">Fecha de Ingreso:</label>
+            <input type="date" id="fechaIngreso" th:field="*{fechaIngreso}">
+        </div>
+        <div>
+            <label for="fechaSalida">Fecha de Salida:</label>
+            <input type="date" id="fechaSalida" th:field="*{fechaSalida}">
+        </div>
+        <div>
+            <button type="submit">Reservar</button>
+        </div>
+    </form>
+</section>
+
+<footer>
+    <p>Derechos reservados - Hotelera EstebanQuesada</p>
+</footer>
+</body>
+</html>
