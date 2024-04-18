@@ -1,0 +1,55 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 7 feb 2024, 18:38:28
+    Author     : EsteP
+*/
+tbody tr:nth-child(odd) {
+    background-color: #f2f2f2; /* Gris claro */
+    color: #333; /* Texto oscuro */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #e6e6e6; /* Gris más oscuro */
+    color: #333; /* Texto oscuro */
+}
+
+.header {
+    background-color: #076af0; /* Azul */
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-menu-link:hover {
+    background-color: #024070; /* Azul más oscuro */
+}
+
+.aside {
+    background-color: #f0e68c; /* Amarillo claro */
+}
+
+.section {
+    background-color: #ffe4b5; /* Marrón claro */
+}
+
+.footer {
+    background-color: #f0e68c; /* Amarillo claro */
+}
+
+.card-header {
+    background-color: #8a2be2; /* Morado */
+}
+.custom-card-body {
+    padding: 20px; /* Ajustar el relleno según sea necesario */
+    border-radius: 10px; /* Agregar bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agregar sombra */
+}
+.btn-purple {
+    background-color: purple;
+    color: white; /* Para asegurar que el texto sea legible */
+    /* Puedes agregar otros estilos según tus preferencias */
+}
